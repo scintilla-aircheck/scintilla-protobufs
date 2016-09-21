@@ -18,11 +18,41 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='reading.proto',
   package='',
-  serialized_pb=_b('\n\rreading.proto\"\x8e\x01\n\x0eReadingMessage\x12\x0e\n\x06sensor\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x14\x61verage_over_seconds\x18\x03 \x01(\x03\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08latitude\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x0c\n\x04time\x18\x07 \x01(\x03')
+  serialized_pb=_b('\n\rreading.proto\"7\n\x13ReadingGroupMessage\x12 \n\x07reading\x18\x01 \x03(\x0b\x32\x0f.ReadingMessage\"\x8e\x01\n\x0eReadingMessage\x12\x0e\n\x06sensor\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x14\x61verage_over_seconds\x18\x03 \x01(\x03\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08latitude\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x0c\n\x04time\x18\x07 \x01(\x03')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
+
+
+_READINGGROUPMESSAGE = _descriptor.Descriptor(
+  name='ReadingGroupMessage',
+  full_name='ReadingGroupMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reading', full_name='ReadingGroupMessage.reading', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17,
+  serialized_end=72,
+)
 
 
 _READINGMESSAGE = _descriptor.Descriptor(
@@ -92,11 +122,20 @@ _READINGMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18,
-  serialized_end=160,
+  serialized_start=75,
+  serialized_end=217,
 )
 
+_READINGGROUPMESSAGE.fields_by_name['reading'].message_type = _READINGMESSAGE
+DESCRIPTOR.message_types_by_name['ReadingGroupMessage'] = _READINGGROUPMESSAGE
 DESCRIPTOR.message_types_by_name['ReadingMessage'] = _READINGMESSAGE
+
+ReadingGroupMessage = _reflection.GeneratedProtocolMessageType('ReadingGroupMessage', (_message.Message,), dict(
+  DESCRIPTOR = _READINGGROUPMESSAGE,
+  __module__ = 'reading_pb2'
+  # @@protoc_insertion_point(class_scope:ReadingGroupMessage)
+  ))
+_sym_db.RegisterMessage(ReadingGroupMessage)
 
 ReadingMessage = _reflection.GeneratedProtocolMessageType('ReadingMessage', (_message.Message,), dict(
   DESCRIPTOR = _READINGMESSAGE,

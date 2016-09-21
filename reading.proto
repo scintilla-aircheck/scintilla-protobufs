@@ -3,6 +3,10 @@
 
 syntax = "proto2";
 
+message ReadingGroupMessage {
+    repeated ReadingMessage reading = 1;
+}
+
 message ReadingMessage {
     optional int32 sensor = 1;
     optional double value = 2;
