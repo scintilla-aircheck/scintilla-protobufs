@@ -1,4 +1,6 @@
 .idea/
 proto_command
 proto_python_command
+__pycache__/
+*.pyc
 
