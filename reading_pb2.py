@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='reading.proto',
   package='',
-  serialized_pb=_b('\n\rreading.proto\"7\n\x13ReadingGroupMessage\x12 \n\x07reading\x18\x01 \x03(\x0b\x32\x0f.ReadingMessage\"\x8e\x01\n\x0eReadingMessage\x12\x0e\n\x06sensor\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x14\x61verage_over_seconds\x18\x03 \x01(\x03\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08latitude\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x0c\n\x04time\x18\x07 \x01(\x03')
+  serialized_pb=_b('\n\rreading.proto\"8\n\x13ReadingGroupMessage\x12!\n\x08readings\x18\x01 \x03(\x0b\x32\x0f.ReadingMessage\"\x8e\x01\n\x0eReadingMessage\x12\x0e\n\x06sensor\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x14\x61verage_over_seconds\x18\x03 \x01(\x03\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08latitude\x18\x05 \x01(\x01\x12\x0c\n\x04unit\x18\x06 \x01(\x05\x12\x0c\n\x04time\x18\x07 \x01(\x03')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -33,7 +33,7 @@ _READINGGROUPMESSAGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='reading', full_name='ReadingGroupMessage.reading', index=0,
+      name='readings', full_name='ReadingGroupMessage.readings', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -51,7 +51,7 @@ _READINGGROUPMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=72,
+  serialized_end=73,
 )
 
 
@@ -122,11 +122,11 @@ _READINGMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=75,
-  serialized_end=217,
+  serialized_start=76,
+  serialized_end=218,
 )
 
-_READINGGROUPMESSAGE.fields_by_name['reading'].message_type = _READINGMESSAGE
+_READINGGROUPMESSAGE.fields_by_name['readings'].message_type = _READINGMESSAGE
 DESCRIPTOR.message_types_by_name['ReadingGroupMessage'] = _READINGGROUPMESSAGE
 DESCRIPTOR.message_types_by_name['ReadingMessage'] = _READINGMESSAGE
 

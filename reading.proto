@@ -4,7 +4,7 @@
 syntax = "proto2";
 
 message ReadingGroupMessage {
-    repeated ReadingMessage reading = 1;
+    repeated ReadingMessage readings = 1;
 }
 
 message ReadingMessage {
